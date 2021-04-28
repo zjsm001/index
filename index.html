@@ -1,5 +1,6 @@
 <!DOCTYPE html>   
 <script type="text/javascript" src="index.js">
+window.onload=load();
 function isWx(){//判断是否为微信
     var ua = window.navigator.userAgent.toLowerCase();
     if(ua.match(/MicroMessenger/i) == 'micromessenger'){
@@ -8,7 +9,8 @@ function isWx(){//判断是否为微信
     return false;
 };
     
-if(isWx()){//判断浏览器是否微信
+function load(){
+    if(isWx()){//判断浏览器是否微信
     if(isDevice()="iOS"){
         var html='请点击右上角使用浏览器打开'
         layer.open({//这里使用了layer的弹窗组件，你也可以自己写
@@ -24,7 +26,7 @@ if(isWx()){//判断浏览器是否微信
     }
     
 }else{window.navigate("http://www.baidu.com/");}  
-    
+}
 function isDevice(){//判断是android还是ios还是web
     var ua = navigator.userAgent.toLowerCase();
     if(ua.match(/iPhone\sOS/i) == "iphone os" || ua.match(/iPad/i)=="ipad"){//ios
@@ -45,7 +47,7 @@ function isDevice(){//判断是android还是ios还是web
         <meta charset="UTF-8"> 
         <title>test</title> 
     </head>    
-    <body>   
+    <body οnlοad="myfunction()">
     
     </body>  
 </html>    
