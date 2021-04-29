@@ -5,12 +5,9 @@
                window.onload=load();
                function load(){
                    if(isWx()){
-                       layer.open({
-                        title: 'test',
-                        content: 'hello layer'
-                        });   
+                       alert("请点击屏幕右上角'...'图标，选择使用浏览器打开！");
                    }else{
-                       alert("不是微信");
+           
                        window.location.href="http://www.baidu.com/";
                    }
                    
