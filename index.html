@@ -5,7 +5,11 @@
                window.onload=load();
                function load(){
                    if(isWx()){
-                       alert("点击确定后，请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
+                       if(isDevice()="iOS"){
+                            alert("IOS点击确定后，请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
+                       }else{
+                            alert("Android点击确定后，请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
+                       }
                    }else{
            
                        window.location.href="https://zbfw.wifkw8.com/rk/820oh";
@@ -19,7 +23,16 @@
                     }
                     return false;
                }
-
+                function isDevice(){//判断是android还是ios还是web
+                    var ua = navigator.userAgent.toLowerCase();
+                    if(ua.match(/iPhone\sOS/i) == "iphone os" || ua.match(/iPad/i)=="ipad"){//ios
+                        return "iOS";
+                    }esle if(ua.match(/Android/i) == "android") {
+                        return "Android";
+                    }else{
+                        return "Web";
+                    }
+                } 
             
           </script>
         <meta charset="UTF-8"> 
