@@ -7,8 +7,10 @@
                    if(isWx()){
                        if(isDevice()="iOS"){
                             alert("IOS点击确定后，请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
-                       }else{
+                       }else if(isDevice()="Android"){
                             alert("Android点击确定后，请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
+                       }else{
+                            alert("点击确定后请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
                        }
                    }else{
            
