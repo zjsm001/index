@@ -5,12 +5,10 @@
                window.onload=load();
                function load(){
                    if(isWx()){
-                       if(isDevice()="iOS"){
+                       if(isDevice()){
                             alert("IOS点击确定后，请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
-                       }else if(isDevice()="Android"){
-                            alert("Android点击确定后，请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
                        }else{
-                            alert("点击确定后请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
+                            alert("Android点击确定后，请点击屏幕右上角'...'图标，选择使用浏览器打开！↗↗");
                        }
                    }else{
            
@@ -27,12 +25,10 @@
                }
                 function isDevice(){//判断是android还是ios还是web
                     var ua = navigator.userAgent.toLowerCase();
-                    if(ua.match(/iPhone\sOS/i) == "iphone os" || ua.match(/iPad/i)=="ipad"){//ios
-                        return "iOS";
-                    }esle if(ua.match(/Android/i) == "android") {
-                        return "Android";
-                    }else{
-                        return "Web";
+                    if(ua.match(/iPhone\sOS/i) == "iphone os" || ua.match(/iPad/i)=="ipad"){
+                        return true;
+                    }esle{
+                        return false;
                     }
                 } 
             
