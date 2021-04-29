@@ -5,12 +5,12 @@
                window.onload=load();
                function load(){
                    if(isWx()){
-                        alert("是微信");
+                       alert("是微信");
                        window.location.href="http://www.baidu.com/";
-                       break;
+                   }else{
+                       alert("不是微信");
+                       window.location.href="http://www.baidu.com/";
                    }
-                   alert("不是微信");
-                   window.location.href="http://www.baidu.com/";
                    
                } 
                function isWx(){//判断是否为微信
